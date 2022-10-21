@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { CarteVisiteComponent } from './carte-visite/carte-visite.component';
 import { ChildComponent } from './my-component/child/child.component';
 import { CvListComponent } from './cv-list/cv-list.component';
+import { CvComponent } from './cv-list/cv/cv.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CvListComponent } from './cv-list/cv-list.component';
     HomeComponent,
     CarteVisiteComponent,
     ChildComponent,
-    CvListComponent
+    CvListComponent,
+    CvComponent
   ],
   imports: [
     BrowserModule,

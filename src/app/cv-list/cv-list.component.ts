@@ -24,9 +24,9 @@ export class CvListComponent implements OnInit {
       name: "Baccouche",
       firstName: "Mooza",
       age: 22,
-      cin: "1432423523",
+      cin: "54642542",
       job: "Student", 
-      path: "dali.png"
+      path: "motaz.jpeg"
     }
   ]
 

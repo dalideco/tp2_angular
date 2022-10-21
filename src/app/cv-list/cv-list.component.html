@@ -12,6 +12,14 @@
     </div>
   </div>
   <div class="cv">
-    
+
+    <app-cv
+        [firstName]="list[selected].firstName"
+        [name]="list[selected].name"
+        [age]="list[selected].age"
+        [job]="list[selected].job"
+        [cin]="list[selected].cin"
+        [path]="list[selected].path"
+    ></app-cv>
   </div>
 </div>
