@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { CarteVisiteComponent } from './carte-visite/carte-visite.component';
 import { ChildComponent } from './my-component/child/child.component';
+import { CvListComponent } from './cv-list/cv-list.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ChildComponent } from './my-component/child/child.component';
     MyComponentComponent,
     HomeComponent,
     CarteVisiteComponent,
-    ChildComponent
+    ChildComponent,
+    CvListComponent
   ],
   imports: [
     BrowserModule,

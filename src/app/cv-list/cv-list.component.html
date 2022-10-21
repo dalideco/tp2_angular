@@ -1,0 +1,17 @@
+<h1>Liste des CV</h1>
+<div class="container">
+  <div class="selector">
+    <div
+      class="select"
+      *ngFor="let cv of list; let i = index"
+      [style.backgroundColor]="i === selected ? 'lightgrey' : 'white'"
+        (click)="changeSelected(i)"
+      >
+      <img [src]="'assets/' + cv.path" alt="" />
+      <h3>{{ cv.firstName }} {{ cv.name }}</h3>
+    </div>
+  </div>
+  <div class="cv">
+    
+  </div>
+</div>
