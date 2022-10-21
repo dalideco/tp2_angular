@@ -1,0 +1,54 @@
+<h1>Carte Visite</h1>
+<div class="container">
+  <div class="card-container">
+    <div class="card face" *ngIf="face === 'front'">
+      <img [src]="'assets/' + path" alt="" />
+      <h2>{{ firstName }} {{ name }}</h2>
+      <small> {{ job }} </small>
+      <p>
+        {{ description }}
+      </p>
+      <div class="rotate">
+        <hr />
+        <button class="rotate-button" (click)="switchFace()">
+          Auto rotate
+        </button>
+      </div>
+    </div>
+
+    <div class="card back" *ngIf="face === 'back'">
+      <h2>{{ workDescription }}</h2>
+      <p>{{ keyWords }}</p>
+
+      <div class="rotate">
+        <hr />
+        <button class="rotate-button" (click)="switchFace()">
+          Auto rotate
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="fields">
+    <p>name</p>
+    <input type="text" placeholder="name" [(ngModel)]="name" />
+
+    <p>first name</p>
+    <input type="text" placeholder="first name" [(ngModel)]="firstName" />
+
+    <p>job</p>
+    <input type="text" placeholder="job" [(ngModel)]="job" />
+
+    <p>image</p>
+    <input type="text" placeholder="path" [(ngModel)]="path" />
+
+    <p>citation favorite</p>
+    <input type="text" placeholder="path" [(ngModel)]="description" />
+
+    <p>Decrivez nous votre travail</p>
+    <input type="text" placeholder="path" [(ngModel)]="workDescription" />
+
+    <p>Mot clé de votre travail</p>
+    <input type="text" placeholder="path" [(ngModel)]="keyWords" />
+  </div>
+</div>
