@@ -4,7 +4,7 @@
     <div
       class="select"
       *ngFor="let cv of list; let i = index"
-      [style.backgroundColor]="i === selected ? 'lightgrey' : 'white'"
+      [style.backgroundColor]="i === selected ? 'lightgrey' : ''"
         (click)="changeSelected(i)"
       >
       <img [src]="'assets/' + cv.path" alt="" />
@@ -23,3 +23,4 @@
     ></app-cv>
   </div>
 </div>
+ <br>

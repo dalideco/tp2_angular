@@ -1,5 +1,7 @@
 .container {
   display: flex;
+  align-items: center;
+  margin-bottom: 50px;
 }
 
 .card-container {
@@ -7,7 +9,6 @@
   z-index: 1;
   width: 500px;
   height: 500px;
-  border: 1px solid lightgrey;
 
   img {
     margin-top: 85px;
@@ -33,13 +34,31 @@
     position: absolute;
     width: 100%;
     height: 100%;
+
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid lightgrey;
+
+    background-color: rgba(255, 255, 255, 0.435);
+
+    box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.1);
   }
   .face {
     opacity: 1;
+    position: relative;
+    z-index: 1;
     &::before {
       content: "";
       position: absolute;
-      background-color: blue;
+      background: rgb(0, 212, 255);
+      background: radial-gradient(
+        circle,
+        rgba(0, 212, 255, 1) 0%,
+        rgba(59, 59, 255, 1) 75%,
+        rgba(25, 16, 172, 1) 100%
+      );
       height: 150px;
       width: 100%;
       z-index: -1;
@@ -70,4 +89,7 @@ button {
 
 input {
   padding: 10px;
+  border: 2px solid lightgrey;
+  border-radius: 5px;
+  font-size: 15px;
 }
