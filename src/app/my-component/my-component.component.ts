@@ -21,5 +21,8 @@ export class MyComponentComponent implements OnInit {
   onButtonClick(): void {
     this.color = ""
   }
+  setColor(value: string) {
+    this.color= value
+  }
 
 }

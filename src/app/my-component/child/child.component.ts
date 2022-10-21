@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit,Input, EventEmitter, Output } from '@angular/core';
 
 
 @Component({
@@ -9,10 +9,18 @@ import { Component, OnInit,Input } from '@angular/core';
 export class ChildComponent implements OnInit {
 
   @Input() color:string ="black";
+  myFavoriteColor: string ="blue"; 
+
+  @Output() favoriteColorEvent= new EventEmitter<string>()
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  
+  setToFavoriteColor() {
+    this.favoriteColorEvent.emit(this.myFavoriteColor)
   }
 
 }

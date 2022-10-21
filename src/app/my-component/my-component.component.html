@@ -4,4 +4,4 @@
 <input type="text" placeholder="Enter color" [(ngModel)]="color" (ngModelChange)="onInputChange()" >
 <button (click)="onButtonClick()"> back to default</button>
 <h3>child</h3>
-<app-child [color]="color" ></app-child>
+<app-child [color]="color" (favoriteColorEvent)="setColor($event)" ></app-child>
