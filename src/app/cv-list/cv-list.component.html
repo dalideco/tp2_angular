@@ -1,25 +1,19 @@
 <h1>Liste des CV</h1>
 <div class="container">
   <div class="selector">
-    <div
-      class="select"
-      *ngFor="let cv of list; let i = index"
-      [style.backgroundColor]="i === selected ? 'lightgrey' : ''"
-        (click)="changeSelected(i)"
-      >
-      <img [src]="'assets/' + cv.path" alt="" />
-      <h3>{{ cv.firstName }} {{ cv.name }}</h3>
-    </div>
+
+    <app-cv-selector
+      [list]="list"
+      [selected] = "selected"
+      (changeSelectedEvent)="changeSelected($event)" 
+    ></app-cv-selector>
   </div>
+
+
   <div class="cv">
 
     <app-cv
-        [firstName]="list[selected].firstName"
-        [name]="list[selected].name"
-        [age]="list[selected].age"
-        [job]="list[selected].job"
-        [cin]="list[selected].cin"
-        [path]="list[selected].path"
+      [cv]="list[selected]"
     ></app-cv>
   </div>
 </div>

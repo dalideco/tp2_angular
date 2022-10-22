@@ -4,41 +4,21 @@ import { Cv } from 'models/Cv';
 @Component({
   selector: 'app-cv-list',
   templateUrl: './cv-list.component.html',
-  styleUrls: ['./cv-list.component.scss']
+  styleUrls: ['./cv-list.component.scss'],
 })
-
-
-
 export class CvListComponent implements OnInit {
-
-  list : Cv[]= [
-    {
-      name: "Sahnoun",
-      firstName: "Dali",
-      age: 21,
-      cin: "1432423523",
-      job: "Student", 
-      path: "dali.png"
-    },
-    {
-      name: "Baccouche",
-      firstName: "Mooza",
-      age: 22,
-      cin: "54642542",
-      job: "Student", 
-      path: "motaz.jpeg"
-    }
-  ]
+  list: Cv[] = [
+    new Cv('Sahnoun', 'Dali', 21, '1432423523', 'Student', 'dali.png'),
+    new Cv('Baccouche', 'Mooza', 22, '54642542', 'Student', 'motaz.jpeg'),
+  ];
 
   selected: number = 0;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   changeSelected(number: number) {
-    this.selected = number
+    this.selected = number;
   }
-
 }
