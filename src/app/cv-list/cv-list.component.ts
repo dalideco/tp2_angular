@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Cv } from 'models/Cv';
+import { CvService } from '../services/cv.service';
 
 @Component({
   selector: 'app-cv-list',
@@ -7,18 +8,16 @@ import { Cv } from 'models/Cv';
   styleUrls: ['./cv-list.component.scss'],
 })
 export class CvListComponent implements OnInit {
-  list: Cv[] = [
-    new Cv('Sahnoun', 'Dali', 21, '1432423523', 'Student', 'dali.png'),
-    new Cv('Baccouche', 'Mooza', 22, '54642542', 'Student', 'motaz.jpeg'),
-  ];
-
-  selected: number = 0;
+  @Input() list: Cv[] = [];
+  selectedCv: Cv | null = null;
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    
+  }
 
-  changeSelected(number: number) {
-    this.selected = number;
+  changeSelected(cv: Cv) {
+    this.selectedCv = cv;
   }
 }

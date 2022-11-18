@@ -1,7 +1,7 @@
 <div
   class="select"
-  [style.backgroundColor]="selected ? 'lightgrey' : ''"
   (click)="changeSelected()"
+  appHoverableClickable
 >
   <img [src]="'assets/' + cv.path" alt="" />
   <h3>{{ cv.firstName }} {{ cv.name }}</h3>

@@ -8,14 +8,13 @@ import { Cv } from 'models/Cv';
 })
 export class CvSelectorComponent implements OnInit {
   @Input() list: Cv[] = [];
-  @Input() selected: number = 0;
-  @Output() changeSelectedEvent = new EventEmitter<number>();
+  @Output() changeSelectedEvent = new EventEmitter<Cv>();
 
   constructor() {}
 
   ngOnInit(): void {}
 
   changeSelected(number: number){
-    this.changeSelectedEvent.emit(number)
+    this.changeSelectedEvent.emit(this.list[number])
   }
 }

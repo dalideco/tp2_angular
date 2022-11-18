@@ -12,6 +12,18 @@ import { CvListComponent } from './cv-list/cv-list.component';
 import { CvComponent } from './cv/cv.component';
 import { CvSelectorComponent } from './cv-selector/cv-selector.component';
 import { CvItemComponent } from './cv-item/cv-item.component';
+import { WebWordComponent } from './web-word/web-word.component';
+import { SelectorComponent } from './selector/selector.component';
+import { WordInputsComponent } from './word-inputs/word-inputs.component';
+import { EditableTextComponent } from './editable-text/editable-text.component';
+import { RandomColorComponent } from './random-color/random-color.component';
+import { RandomColorDirective } from './directives/random-color.directive';
+import { HoverableClickableDirective } from './directives/hoverable-clickable.directive';
+import { DefaultImageComponent } from './default-image/default-image.component';
+import { DefaultImagePipe } from './pipes/default-image.pipe';
+import { HiredComponent } from './hired/hired.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from "ngx-toastr"
 
 @NgModule({
   declarations: [
@@ -23,12 +35,25 @@ import { CvItemComponent } from './cv-item/cv-item.component';
     CvListComponent,
     CvComponent,
     CvSelectorComponent,
-    CvItemComponent
+    CvItemComponent,
+    WebWordComponent,
+    SelectorComponent,
+    WordInputsComponent,
+    EditableTextComponent,
+    RandomColorComponent,
+    RandomColorDirective,
+    HoverableClickableDirective,
+    DefaultImageComponent,
+    DefaultImagePipe,
+    HiredComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,7 +2,6 @@
 <app-cv-item
   *ngFor="let cv of list; let i = index"
   [cv]="cv"
-  [selected]="selected === i"
   (select)="changeSelected(i)"
 >
 </app-cv-item>
