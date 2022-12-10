@@ -21,9 +21,10 @@ import { RandomColorDirective } from './directives/random-color.directive';
 import { HoverableClickableDirective } from './directives/hoverable-clickable.directive';
 import { DefaultImageComponent } from './default-image/default-image.component';
 import { DefaultImagePipe } from './pipes/default-image.pipe';
-import { HiredComponent } from './hired/hired.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ToastrModule } from "ngx-toastr"
+import { ToastrModule } from "ngx-toastr";
+import { ColorPageComponent } from './color-page/color-page.component';
+import { CvPageComponent } from './cv-page/cv-page.component'
 
 @NgModule({
   declarations: [
@@ -45,8 +46,8 @@ import { ToastrModule } from "ngx-toastr"
     HoverableClickableDirective,
     DefaultImageComponent,
     DefaultImagePipe,
-    HiredComponent,
-    
+    ColorPageComponent,
+    CvPageComponent    
   ],
   imports: [
     BrowserModule,
